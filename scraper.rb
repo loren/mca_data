@@ -11,7 +11,7 @@ end
 
 def fetch_results
   parse_rss.each do |lead|
-    ScraperWiki.save_sqlite(%i(title description), lead)
+    ScraperWiki.save_sqlite(%i(guid), lead)
   end
 end
 
