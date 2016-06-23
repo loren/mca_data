@@ -34,7 +34,7 @@ def parse_rss
       description: item.description,
       pubDate: item.pubDate,
       guid: item.guid.content,
-      categories: categories,
+      categories: categories.join(','),
       country_code: extract_iso2_code(country_blob),
       country_name: extract_country_name(country_blob)
     }
